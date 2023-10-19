@@ -25,7 +25,7 @@ const SignUpUser = () => {
                         rules={{ required: true }}
                         render={({ field }) => <input {...field} />}
                     />
-                    {errors.firstName && <p>This field is required.</p>}
+                    {errors.firstName && <p>Please complete. This field is required!</p>}
                 </div>
                 <div>
                     <label>Last Name</label>
@@ -35,7 +35,7 @@ const SignUpUser = () => {
                         rules={{ required: true }}
                         render={({ field }) => <input {...field} />}
                     />
-                    {errors.lastName && <p>This field is required.</p>}
+                    {errors.lastName && <p>Please complete. This field is required!</p>}
                 </div>
                 <div>
                     <label>Username</label>
@@ -45,7 +45,7 @@ const SignUpUser = () => {
                         rules={{ required: true }}
                         render={({ field }) => <input {...field} />}
                     />
-                    {errors.userName && <p>This field is required.</p>}
+                    {errors.userName && <p>Please complete. This field is required!</p>}
                 </div>
                 <div>
                     <label>Email</label>
@@ -59,10 +59,10 @@ const SignUpUser = () => {
                         render={({ field }) => <input {...field} />}
                     />
                     {errors.email && errors.email.type === 'required' && (
-                        <p>This field is required.</p>
+                        <p>Please complete. This field is required!</p>
                     )}
                     {errors.email && errors.email.type === 'pattern' && (
-                        <p>Invalid email format.</p>
+                        <p>Please write a valid email format.</p>
                     )}
                 </div>
                 <div>
@@ -73,7 +73,7 @@ const SignUpUser = () => {
                         rules={{ required: true }}
                         render={({ field }) => <input type="password" {...field} />}
                     />
-                    {errors.password && <p>This field is required.</p>}
+                    {errors.password && <p>Please complete. This field is required!</p>}
                 </div>
                 <div>
                     <label>Confirm Password</label>
@@ -100,5 +100,4 @@ const SignUpUser = () => {
         </div>
     );
 };
-
 export default SignUpUser;
